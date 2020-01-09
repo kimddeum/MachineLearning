@@ -87,7 +87,7 @@ def random_forest(trees, depth, train_x, train_y, test_x, test_y):
 if __name__ == '__main__':
     train_set, _, test_set = load_data('mnist.pkl.gz')
 
-    # kNN for eigen projected data on 2, 5, and 10 dimensions
+    # NN for eigen projected data on 2, 5, and 10 dimensions
 
     print("kNN for 2, 5, 10 eigen dimension")
 
@@ -112,7 +112,8 @@ if __name__ == '__main__':
             print("Accuracy of kNN with k={} in {} eigen-dim: {:.4f}".format(neighbor, eigen_dim, kNN(train_x, train_y, test_x, test_y, neighbor)))
 
 
-    # random forest
+    #random forest
+
     print("Random Forest with different depth and estimators")
     train_x, train_y = train_set
     test_x, test_y = test_set
