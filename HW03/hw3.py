@@ -87,7 +87,7 @@ def random_forest(trees, depth, train_x, train_y, test_x, test_y):
 if __name__ == '__main__':
     train_set, _, test_set = load_data('mnist.pkl.gz')
 
-    # NN for eigen projected data on 2, 5, and 10 dimensions
+    #kNN for eigen projected data on 2, 5, and 10 dimensions
 
     print("kNN for 2, 5, 10 eigen dimension")
 
