@@ -10,8 +10,9 @@ Repository of Machine Learning course @ HGU
   - [description](HW03/README.md)
   - [implementation](HW03/hw3.py)
 - HW04: kMeans algorithm on MNIST images.
-  - [description]()
+  - [description](HW04/README.md)
+  - [Implementation](HW04/hw4.py)
 - HW05: implement RBF networks and apply ‘circles in the square’ and ‘function approximation’ data.
-  - [description]()
+  - [description](HW05/README.md)
 - HW06: LDA and PCA
-  - [desccription]()
+  - [desccription](HW06/README.md)
