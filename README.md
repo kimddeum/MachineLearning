@@ -1,5 +1,5 @@
 # Machine Learning
-Repository of Machine Learning course @ HGU
+Repository of assignments from Machine Learning course.
 
 ## Assignments 
 - HW01: calculate and draw mean, variance, eigenvalues and eigenvectors of [MNIST](http://deeplearning.net/data/mnist/mnist.pkl.gz).
@@ -11,8 +11,11 @@ Repository of Machine Learning course @ HGU
   - [implementation](HW03/hw3.py)
 - HW04: kMeans algorithm on MNIST images.
   - [description](HW04/README.md)
-  - [Implementation](HW04/hw4.py)
+  - [implementation](HW04/hw4.py)
+  - [results](HW04/Result)
 - HW05: implement RBF networks and apply ‘circles in the square’ and ‘function approximation’ data.
   - [description](HW05/README.md)
 - HW06: LDA and PCA
   - [desccription](HW06/README.md)
+  - [implementation](HW06/hw6.py)
+  - [results](HW06/Result)
