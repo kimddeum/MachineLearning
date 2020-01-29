@@ -53,7 +53,7 @@ def load_data(dataset):
     return train_set, valid_set, test_set
 
 
-class kMeans():
+class kMean:
 
     def __init__(self, k, dim):
         self.k = k
