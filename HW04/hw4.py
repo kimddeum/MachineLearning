@@ -55,9 +55,8 @@ def load_data(dataset):
 
 class kMeans():
 
-    def __init__(self, k, data, dim):
+    def __init__(self, k, dim):
         self.k = k
-        self.data = data
         self.dim = dim
 
     def init_centroids(self):
@@ -89,11 +88,12 @@ class kMeans():
             new_centroids[cent_id] = new
 
         if dim is None:
-            return new_centroids.reshape(-1, 784)
+            return new_centroids
         else:
             return new_centroids.reshape(len(new_centroids), -1)
 
-    def run(self):
+    def fit(self, data):
+        self.data = data
         print('\t Starting kMeans algorithm')
         prev_diff = 0
         centroids = self.init_centroids()
@@ -114,7 +114,7 @@ class kMeans():
             if changes < 10e-6:
                 break
 
-        return clusters, centroids
+        return centroids, clusters
 
 
 def extract_feature(feature, train_set):
@@ -142,12 +142,11 @@ def eigenprojection(data, dim=2):
     return eigen_data
 
 
-def draw_scatter(k, dim, data, clusters, centroids):
+def draw_scatter(k, dim, data, centroids, clusters):
 
     fig, ax = plt.subplots()
 
     for i, j in clusters.items():
-        print(i)
         clustered_data = np.array(data[j])
 
         if dim is None:
@@ -164,14 +163,15 @@ if __name__ == '__main__':
 
     feature = [3, 9]
     num_cluster = [2, 3, 5, 10]
-    eigen_dim_list = [2, 5, 10]
+    eigen_dim_list = [None, 2, 5, 10]
+
+    data = extract_feature(feature, train_set)
 
     for dim in eigen_dim_list:
         for k in num_cluster:
-            data = extract_feature(feature, train_set)
 
             if dim is not None:
                 data = eigenprojection(data, dim)
 
-            opt_clusters, centroids = kMeans(k, data, dim).run()
-            draw_scatter(k, dim, data, opt_clusters, centroids)
+            centroids, clusters = kMeans(k, dim).fit(data)
+            draw_scatter(k, dim, data, centroids, clusters)
