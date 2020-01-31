@@ -12,10 +12,12 @@ Repository of assignments from Machine Learning course.
 - HW04: kMeans algorithm on MNIST images.
   - [description](HW04/README.md)
   - [implementation](HW04/hw4.py)
-  - [results](HW04/Result)
+  - [results](HW04/Results)
 - HW05: implement RBF networks and apply ‘circles in the square’ and ‘function approximation’ data.
   - [description](HW05/README.md)
+  - [implementation](HW05/hw5.py)
+  - [results](HW05/Results)
 - HW06: LDA and PCA
   - [desccription](HW06/README.md)
   - [implementation](HW06/hw6.py)
-  - [results](HW06/Result)
+  - [results](HW06/Results)
